@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: tarpslice-cli
+Version: 1.0.0
+Summary: CLI tool for generating tiled poster/tarpapel PDFs from images
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: Pillow==11.1.0
+Requires-Dist: reportlab==4.2.5
+
+# TarpSlice CLI
+
+A simple, production-style Python CLI tool that converts one image into a tiled multi-page PDF for tarpapel/poster printing.
+
+## Features
+- Image input (PNG, JPG, JPEG, BMP, WEBP)
+- Standard paper sizes (A4, Letter, Legal, Long Bond)
+- Portrait or landscape page orientation
+- Rows × columns tiling mode
+- Optional overlap between pages
+- Cut/crop guides on every page
+- Page labels for assembly (example: `Row 1, Col 2`)
+- Clean, modular project structure
+
+## Quick start
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+pip install -e .
+python -m tarpslice
+```
+
+## Notes
+- Print the resulting PDF at **100% scale / actual size**.
+- This MVP currently supports **image input only**.
